@@ -6,6 +6,8 @@ public class Main {
 
         B b = new B(1, 2, 3);
         b.show();
+        b.show("fantastic");
+
     }
 }
 
@@ -35,7 +37,7 @@ class B extends A {
         this.k = k;
     }
 
-    void show() {
-        System.out.println(k+k);
+    void show(String x) {
+        System.out.println(k+k + x);
     }
 }
