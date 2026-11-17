@@ -8,10 +8,16 @@ public class Main {
         String fileName = "notes.txt";
 
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+        //файл каждый раз перезаписывается
+        /*если надо дописат ьв конец то добавлем true
+        FileWriter(fileName, true)
+         * */
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
             writer.write("Первая строка текста");
             writer.newLine();
             writer.write("Вторая строка");
+            writer.newLine();
+            writer.write("еще строка добавление");
             System.out.println("Файл успешно записан");
         } catch (IOException e) {
             System.out.println("Ошибка записи в файл");
